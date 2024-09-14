@@ -1,6 +1,6 @@
-# SVG Markup and Edit Application
+# Voodle
 
-write up the title information describing stuff TODO
+Voodle is a combination of vector and doodle and is a web application lets directly mark up SVG files.
 
 ## Specification Deliverables
 
@@ -9,6 +9,9 @@ Required information for the `Startup Specification`
 ### Elevator Pitch
 
 TODO Elevator pitch
+for(description of person) That(describe a problem) (name of my product) does(describe function of product). unlike(name of a similar product) this tool(description of unique benefit)
+
+For engineering design firms marking up Vector images is can be difficult. Voodle lets you physically mark up the SVG file  
 
 ### Design
 
