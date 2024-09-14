@@ -1,4 +1,4 @@
-# Startup Idea Title TODO
+# SVG Markup and Edit Application
 
 write up the title information describing stuff TODO
 
@@ -37,12 +37,12 @@ TODO required technologies
 
 TODO HTML STUFF
 
-- [x] **HTML pages**
-- [x] **Links**
-- [x] **Text**
+- [ ] **HTML pages**
+- [ ] **Links**
+- [ ] **Text**
 - [ ] **Images**
-- [x] **DB/Login**
-- [x] **WebSocket**
+- [ ] **DB/Login**
+- [ ] **WebSocket**
 
 ## CSS Deliverable
 
