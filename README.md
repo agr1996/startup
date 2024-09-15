@@ -19,21 +19,30 @@ TODO add Images and Text
 
 ### Key Features
 
-- TODO Key Features
-- green
-- eggs
-- and spam
+- Secure login over HTTPS
+- Secure sharing between users of markup vector drawings
+- Preview of drawing
+- Import of SVG for markup
+- Export of SVG after markup
+- Basic Markup Tools
+    - Text
+    - Lines
+    - Arrows
+    - Annotation Cloud
 
 ### Technologies
 
 TODO required technologies
 
-- **HTML**
-- **CSS**
-- **React**
-- **Service**
-    - TODO Services
-- **DB/Login**
+- **HTML** - Correct HTML structure for application. Three HTML pages. One for login, one for importing and marking up SVG files, one for finding and securely sharing and receiving SVG files post markup.
+- **CSS** - Consistent Application styling across the different pages. Styling that can take advantage of different screen sizes with full functionality on mobile.
+- **React** - Provides login, file import, markup, file share and export
+- **Service** - Backend service with endpoint for: 
+    - Login
+    - SVG import
+    - User file share
+    - SVG export
+- **DB/Login** - Store users and user identification number, for secure sharing of drawings. Register login and assign user identification number. 
 - **WebSocket**
 
 ## HTML Deliverable
