@@ -1,17 +1,14 @@
 # Voodle
 
-Voodle is a combination of vector and doodle and is a web application lets directly mark up SVG files.
+Voodle is a combination of vector and doodle and is a web application lets directly mark up SVG files, then securely share them with other users.
 
 ## Specification Deliverables
 
-Required information for the `Startup Specification`
+`Startup Specification`
 
 ### Elevator Pitch
 
-TODO Elevator pitch
-for(description of person) That(describe a problem) (name of my product) does(describe function of product). unlike(name of a similar product) this tool(description of unique benefit)
-
-For engineering design firms marking up Vector images is can be difficult. Voodle lets you physically mark up the SVG file  
+For engineering design firms marking up Vector images can be difficult. Voodle lets you physically mark up the SVG file then securely share or transfer the newly modified SVG file to other users. Other applications require the SVG CAD file of the drawing to be converted into a pdf, then the markup notes remain in the PDF. Voodle will allow the markup notes to remain as elements of the SVG file itself. These elements will have all the advantages of being part of the SVG file itself and then securely shared to respective parties. With engineering firms keeping files secure is important to prevent theft of intellectual property.
 
 ### Design
 
@@ -32,7 +29,7 @@ TODO add Images and Text
 
 ### Technologies
 
-TODO required technologies
+I will use the following technologies to implement my Voodle application.
 
 - **HTML** - Correct HTML structure for application. Three HTML pages. One for login, one for importing and marking up SVG files, one for finding and securely sharing and receiving SVG files post markup.
 - **CSS** - Consistent Application styling across the different pages. Styling that can take advantage of different screen sizes with full functionality on mobile.
