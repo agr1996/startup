@@ -14,13 +14,29 @@
     <nav>
       <menu>
         <li><a href="index.html">Home</a></li>
-        <li><a href="signin.html">SignIn</a></li>
+        <li><a href="signin.html">Sign in</a></li>
         <li><a href="register.html">Register</a></li>
         <li><a href="markup.html">Markup</a></li>
         <li><a href="share.html">Share</a></li>
       </menu>
     </nav>
+    <hr>
   </header>
+  <main>
+    <h1>Welcome to Simon</h1>
+    <form method="get" action="markup.html">
+      <div>
+        <span>@</span>
+        <input type="text" placeholder="Username" />
+      </div>
+      <div>
+        <span>🔒</span>
+        <input type="password" placeholder="Password" />
+      </div>
+      <button type="submit">Sign in</button>
+      <button type="button" onclick="window.location.href='register.html'">Register</button>
+    </form>
+  </main>
   <footer>
     <hr>
     <strong>Andrew Redd</strong>
