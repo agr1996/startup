@@ -55,9 +55,9 @@ I will use the following technologies to implement my Voodle application.
 
 ➡️ The following is what I worked on for my `Startup HTML` deliverable
 
-- [x] **HTML pages** - Create 5 HTML pages
-- [x] **Links** - The login page automatically links to the voter page. The voter page contains links for every voting choice.
-- [x] **Text** - Each of the voting choices is represented by a textual description.
-- [ ] **Images** - I couldn't figure out how to include an image and so I didn't do this. 😔
-- [x] **DB/Login** - Input box and submit button for login. The voting choices represent data pulled from the database.
-- [x] **WebSocket** - The count of voting results represent the tally of realtime votes.
+- [x] **HTML pages** - Create 5 HTML pages with similar features to modern website. The index.html has an about that explains what Voodle is, which will be added to as more features are added in subsequent assignments. The signin.html contains username and password input fields for and a sign in button as well as a button to the registration page. The register.html as text fields for username, email and password. The markup.html has a toolbar of useful markup commands on svg files. The share.html page contains text fields for recipient ID a button to choose a file to share and an optional description.  
+- [x] **Links** - All pages currently have navigation links between each page, eventually to be put in a hamburger menu. Current website design has the home page with an about for the company with a sign in button in the header. Sign in button in the header that navigates to the sign in page it Sign in button links to the markup page. Within the header of the sign in page a button "create account" that links to the registration page. Markup page has a button with a share icon that links to the share page.  
+- [x] **Text** - Home page contains a short snippet of text explaining Voodle. Text fields contain descriptions of what is entered or specifications for text entered 
+- [x] **Images** - The home page has a marketing image that will eventually be replaced when final features are added. Markup has a place holder image for where the uploaded SVG's will be displayed. Unique icons for each head of the html pages to be displayed on the tabs depending which page you are in. Unique icons used for the share button, as well as the 6 placeholder toolbar buttons on the markup page. The larger images have a minimal amount of css to maintain reasonable size between screen sizes
+- [x] **DB/Login** - Input boxes as well as sign in and registration buttons for the sign in page as well as the registration button. On successful registration a unique identification number is assigned with a place holder in the header of the share page. This identification number is used to obfuscate the identifying information of users to more securely share modified svg's.
+- [ ] **WebSocket** - On the share page the the user id number is a place holder to be associated with a login account and is retrieved from the database for the purpose of secure share between users. Notification to receiving user when modified svg is delivered.  
