@@ -51,3 +51,13 @@ I will use the following technologies to implement my Voodle application.
     - SVG export
 - **DB/Login** - Store users and user identification number, for secure sharing of drawings. Register login and assign user identification number. 
 - **WebSocket** - Broadcast to other user when a file has been securely with them.
+## HTML deliverable
+
+➡️ The following is what I worked on for my `Startup HTML` deliverable
+
+- [x] **HTML pages** - Create 5 HTML pages
+- [x] **Links** - The login page automatically links to the voter page. The voter page contains links for every voting choice.
+- [x] **Text** - Each of the voting choices is represented by a textual description.
+- [ ] **Images** - I couldn't figure out how to include an image and so I didn't do this. 😔
+- [x] **DB/Login** - Input box and submit button for login. The voting choices represent data pulled from the database.
+- [x] **WebSocket** - The count of voting results represent the tally of realtime votes.
