@@ -11,6 +11,7 @@
 <body>
   <header>
     <h1>Voodle</h1>
+    <button type="button" onclick="window.location.href='register.html'">Register</button>
     <nav>
       <h3>Navigation Links</h3><!-- this is temp for navigation eventually replaced with buttons and hamburger-->
       <menu>
@@ -24,18 +25,25 @@
     <hr>
   </header>
   <main>
-    <h1>Welcome to Simon</h1>
+    <h1>Sign in</h1>
     <form method="get" action="markup.html">
       <div>
-        <span>@</span>
-        <input type="text" placeholder="Username" />
+        <label for="username"><small>Username</small></label>
+        <br>
+        <input type="text" id="username" name="username" required>
       </div>
       <div>
-        <span>🔒</span>
-        <input type="password" placeholder="Password" />
+        <label for="password"><small>Password</small></label>
+        <br>
+        <input type="password" id="password" name="password" required>
       </div>
-      <button type="submit">Sign in</button>
-      <button type="button" onclick="window.location.href='register.html'">Register</button>
+      <div>
+        <input type="checkbox" id="rememberMe" name="rememberMe">
+        <label for="rememberMe"><small>Remember me</small></label>
+      </div>
+      <div>
+        <button type="submit"><small>Sign in</small></button>
+      </div>
     </form>
   </main>
   <footer>
