@@ -18,8 +18,8 @@ header {
     z-index: 1;
 }
 
-/* Hamburger button styling */
-.hamburger {
+/* Navigation button styling */
+.navigation {
     display: flex;
     flex-direction: column;
     background: none;
@@ -27,8 +27,8 @@ header {
     cursor: pointer;
 }
 
-/* Styling for each bar in the hamburger button */
-.hamburger .bar {
+/* Styling for each bar in the navigation button */
+.navigation .bar {
     width: 25px;
     height: 3px;
     background-color: white;
