@@ -9,23 +9,29 @@
 </head>
 <body>
   <header>
+    <!-- Hamburger button to toggle the navigation menu -->
     <button class="hamburger" onclick="toggleMenu()">
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
     </button>
+    <!-- Website title -->
     <h1>Voodle</h1>
+    <!-- Sign-in button -->
     <button type="button" onclick="window.location.href='signin.html'"><small>Sign in</small></button>
-    <nav id="nav-menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="signin.html">Sign in</a></li>
-        <li><a href="register.html">Register</a></li>
-        <li><a href="markup.html">Markup</a></li>
-        <li><a href="share.html">Share</a></li>
-      </ul>
-    </nav>
   </header>
+  <!-- Navigation menu -->
+  <nav id="nav-menu">
+    <!-- Close button to hide the navigation menu -->
+    <button class="close-btn" onclick="toggleMenu()">X</button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="signin.html">Sign in</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="markup.html">Markup</a></li>
+      <li><a href="share.html">Share</a></li>
+    </ul>
+  </nav>
   <hr>
   <main>
     <h1>About</h1>
@@ -46,6 +52,7 @@
     <br>
     <a href="https://github.com/agr1996/startup">GitHub</a>
   </footer>
+  <!-- Link to the JavaScript file -->
   <script src="script.js"></script>
 </body>
 </html>

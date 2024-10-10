@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,25 +7,35 @@
     <link rel="icon" href="assets/share.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <header>
+        <!-- Hamburger button to toggle the navigation menu -->
+        <button class="hamburger" onclick="toggleMenu()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <!-- Website title -->
         <h1>Voodle</h1>
-        <nav>
-            <h3>Navigation Links</h3><!-- this is temp for navigation eventually replaced with buttons and hamburger-->
-            <menu>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="signin.html">Sign in</a></li>
-                <li><a href="register.html">Register</a></li>
-                <li><a href="markup.html">Markup</a></li>
-                <li><a href="share.html">Share</a></li>
-            </menu>
-        </nav>
-        <div>
-        <h3>User ID: 24601</h3><!--Placeholder used for the database to securely share to another person with obfuscated ID-->
-        </div>
-        <hr>
+        <!-- Sign-in button -->
+        <button type="button" onclick="window.location.href='signin.html'"><small>Sign in</small></button>
     </header>
+    <!-- Navigation menu -->
+    <nav id="nav-menu">
+        <!-- Close button to hide the navigation menu -->
+        <button class="close-btn" onclick="toggleMenu()">X</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="signin.html">Sign in</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="markup.html">Markup</a></li>
+            <li><a href="share.html">Share</a></li>
+        </ul>
+    </nav>
+    <div>
+        <h3>User ID: 24601</h3><!-- Placeholder used for the database to securely share to another person with obfuscated ID -->
+    </div>
+    <hr>
     <main>
         <h1>Share</h1>
         <form method="get" action="markup.html">
@@ -35,7 +44,6 @@
                 <br>
                 <input type="text" placeholder="Recipient ID" id="title" name="title" required>
             </div>
-
             <div>
                 <label for="file"><small>File</small></label>
                 <br>
@@ -59,7 +67,7 @@
         <br>
         <a href="https://github.com/agr1996/startup">GitHub</a>
     </footer>
-
+    <!-- Link to the JavaScript file -->
+    <script src="script.js"></script>
 </body>
-
 </html>
