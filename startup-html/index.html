@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,27 +7,29 @@
   <link rel="icon" href="assets/edit-pencil.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
   <header>
+    <button class="hamburger" onclick="toggleMenu()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
     <h1>Voodle</h1>
-    <button type="button" onclick="window.location.href='signin.html'"><small>Sign in</small></button><!-- style this to have a hamburger on the left
-    for navigation title in the middle and a button on the right for sign in-->
-    <nav>
-      <h3>Navigation Links</h3><!-- this is temp for navigation eventually replaced with buttons and hamburger-->
-      <menu>
+    <button type="button" onclick="window.location.href='signin.html'"><small>Sign in</small></button>
+    <nav id="nav-menu">
+      <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="signin.html">Sign in</a></li>
         <li><a href="register.html">Register</a></li>
         <li><a href="markup.html">Markup</a></li>
         <li><a href="share.html">Share</a></li>
-      </menu>
+      </ul>
     </nav>
   </header>
   <hr>
   <main>
     <h1>About</h1>
-    <p>Voodle is a combination of vector and doodle and is a web application lets directly mark up SVG files, then securely share them with other users.</p>
+    <p>Voodle is a combination of vector and doodle and is a web application that lets you directly mark up SVG files, then securely share them with other users.</p>
     <div>
       <img src="assets/Blueprint.png" alt="Blueprint">
     </div>
@@ -45,6 +46,6 @@
     <br>
     <a href="https://github.com/agr1996/startup">GitHub</a>
   </footer>
+  <script src="script.js"></script>
 </body>
-
 </html>
