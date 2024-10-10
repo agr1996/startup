@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markup</title>
+    <link rel="icon" href="assets/edit-pencil.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- Hamburger button to toggle the navigation menu -->
+        <button class="navigation" onclick="toggleMenu()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <!-- Website title -->
+        <h1>Voodle</h1>
+        <!-- Sign-in button -->
+        <button type="button" onclick="window.location.href='signin.html'"><small>Sign in</small></button>
+    </header>
+    <!-- Navigation menu -->
+    <nav id="nav-menu">
+        <!-- Close button to hide the navigation menu -->
+        <button class="close-btn" onclick="toggleMenu()">X</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="signin.html">Sign in</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="markup.html">Markup</a></li>
+            <li><a href="share.html">Share</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <main>
+        <h1>Markup</h1>
+        <div class="toolbar">
+            <button><img src="assets/text.svg" alt="Button 1"></button>
+            <button><img src="assets/one-point-circle.svg" alt="Button 2"></button>
+            <button><img src="assets/square3d-corner-to-corner.svg" alt="Button 3"></button>
+            <button><img src="assets/linear.svg" alt="Button 4"></button>
+            <button><img src="assets/undo.svg" alt="Button 5"></button>
+            <button><img src="assets/erase.svg" alt="Button 6"></button>
+        </div>
+        <style>
+            .toolbar {
+                display: flex;
+                justify-content: space-around;
+                padding: 10px;
+            }
+
+            .toolbar button {
+                background: none;
+                border: none;
+                cursor: pointer;
+            }
+
+            .toolbar img {
+                width: 32px;
+                height: 32px;
+            }
+        </style>
+
+        <div>
+            <img src="assets/example.png" alt="example">
+        </div>
+        <style>
+            img {
+                width: 100%;
+                height: auto;
+            }
+        </style>
+
+        <div>
+            <button type="submit">
+                <a href="share.html">
+                    <img src="assets/share.svg" alt="Sent" style="width: 50px; height: 50px;">
+                </a>
+            </button>
+        </div>
+        <p>file shared from: 24601</p><!--placeholder for notification when file is shared-->
+    </main>
+    <footer>
+        <hr>
+        <strong>Andrew Redd</strong>
+        <br>
+        <a href="https://github.com/agr1996/startup">GitHub</a>
+    </footer>
+    <!-- Link to the JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

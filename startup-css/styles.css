@@ -1,0 +1,108 @@
+/* styles.css */
+
+/* General body styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+/* Navigation button styling */
+.navigation {
+    display: flex;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Styling for each bar in the navigation button */
+.navigation .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+/* Title styling */
+h1 {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+}
+
+/* General button styling */
+button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Small text inside buttons */
+button small {
+    font-size: 0.8em;
+}
+
+/* Navigation menu styling */
+nav {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+/* Show the navigation menu when active */
+nav.active {
+    display: flex;
+}
+
+/* Styling for the navigation list */
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+/* Styling for each navigation list item */
+nav ul li {
+    margin: 20px 0;
+}
+
+/* Styling for navigation links */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+/* Close button styling */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+}

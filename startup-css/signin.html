@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SignIn</title>
+  <link rel="icon" href="assets/log-in.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <!-- Hamburger button to toggle the navigation menu -->
+    <button class="navigation" onclick="toggleMenu()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <!-- Website title -->
+    <h1>Voodle</h1>
+    <!-- Create Account button -->
+    <button type="button" onclick="window.location.href='register.html'"><small>Create Account</small></button>
+  </header>
+  <!-- Navigation menu -->
+  <nav id="nav-menu">
+    <!-- Close button to hide the navigation menu -->
+    <button class="close-btn" onclick="toggleMenu()">X</button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="signin.html">Sign in</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="markup.html">Markup</a></li>
+      <li><a href="share.html">Share</a></li>
+    </ul>
+  </nav>
+  <hr>
+  <main>
+    <h1>Sign in</h1>
+    <form method="get" action="markup.html">
+      <div>
+        <label for="username"><small>Username</small></label>
+        <br>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div>
+        <label for="password"><small>Password</small></label>
+        <br>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div>
+        <input type="checkbox" id="rememberMe" name="rememberMe">
+        <label for="rememberMe"><small>Remember me</small></label>
+      </div>
+      <div>
+        <button type="submit"><small>Sign in</small></button>
+      </div>
+    </form>
+  </main>
+  <footer>
+    <hr>
+    <strong>Andrew Redd</strong>
+    <br>
+    <a href="https://github.com/agr1996/startup">GitHub</a>
+  </footer>
+  <!-- Link to the JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
