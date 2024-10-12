@@ -1,18 +1,5 @@
 /* signin-styles.css */
 
-/* Center the main content */
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Styling the sign-in header */
-main h1 {
-    margin-bottom: 20px;
-}
-
 /* Styling the form to make it look like a normal sign-in page */
 form {
     display: flex;

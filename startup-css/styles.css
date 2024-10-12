@@ -4,6 +4,9 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Header styling */
@@ -16,6 +19,26 @@ header {
     color: white;
     position: relative;
     z-index: 1;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Footer styling */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    z-index: 1;
+    margin-top: auto; /* Ensures footer is pushed to the bottom */
 }
 
 /* Navigation button styling */
@@ -107,11 +130,3 @@ nav ul li a {
     cursor: pointer;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    z-index: 1;
-}
