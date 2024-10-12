@@ -18,7 +18,6 @@ header {
     background-color: #333;
     color: white;
     position: relative;
-    z-index: 1;
 }
 
 main {
@@ -36,8 +35,7 @@ footer {
     padding: 10px 20px;
     background-color: #333;
     color: white;
-    position: relative;
-    z-index: 1;
+    position: bottom;
     margin-top: auto; /* Ensures footer is pushed to the bottom */
 }
 
@@ -63,6 +61,11 @@ h1 {
     flex-grow: 1;
     text-align: center;
     margin: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
 }
 
 /* General button styling */

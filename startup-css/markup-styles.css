@@ -1,0 +1,17 @@
+.toolbar {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.toolbar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.toolbar img {
+    width: 32px;
+    height: 32px;
+}
+
