@@ -64,7 +64,13 @@ footer a {
 
 /* Title styling */
 h1 {
-    flex-grow: 1;
+    flex-grow: 0;
+    text-align: center;
+    margin: 0;
+}
+
+h2 {
+    flex-grow: 0;
     text-align: center;
     margin: 0;
 }
