@@ -41,6 +41,10 @@ footer {
     position: bottom;
 }
 
+footer a {
+    color: fuchsia;
+}
+
 /* Navigation button styling */
 .navigation {
     display: flex;
