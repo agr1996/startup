@@ -60,4 +60,17 @@ I will use the following technologies to implement my Voodle application.
 - [x] **Text** - Home page contains a short snippet of text explaining Voodle. Text fields contain descriptions of what is entered or specifications for text entered 
 - [x] **Images** - The home page has a marketing image that will eventually be replaced when final features are added. Markup has a place holder image for where the uploaded SVG's will be displayed. Unique icons for each head of the html pages to be displayed on the tabs depending which page you are in. Unique icons used for the share button, as well as the 6 placeholder toolbar buttons on the markup page. The larger images have a minimal amount of css to maintain reasonable size between screen sizes
 - [x] **DB/Login** - Input boxes as well as sign in and registration buttons for the sign in page as well as the registration button. On successful registration a unique identification number is assigned with a place holder in the header of the share page. This identification number is used to obfuscate the identifying information of users to more securely share modified svg's.
-- [x] **WebSocket** - On the share page the the user id number is a place holder to be associated with a login account and is retrieved from the database for the purpose of secure share between users. Notification to receiving user when modified svg is delivered. on the markup page place holder for where notification of file shared.  
+- [x] **WebSocket** - On the share page the the user id number is a place holder to be associated with a login account and is retrieved from the database for the purpose of secure share between users. Notification to receiving user when modified svg is delivered. on the markup page place holder for where notification of file shared.
+## CSS deliverable
+
+➡️ The following is what I worked on for my `Startup CSS` deliverable
+
+- [x] **CSS pages** - A main styles.css that has consistent colors across all pages, then there is a form.css page which has styling for the form used on by the sign in register and share. 
+- [x] **Navigation** - Hamburger menu button with navigation links to all the HTML pages
+- [x] **Header Styling** - Style across all the headers with a hamburger menu button on the left for navigation to other pages.
+- [x] **Main Styling** - Colors and fitting pictures, with styling on the forum across the share.html, signin.html and register.html.
+- [x] **Footer Styling** - Colors with author and Github link distributed.
+- [x] **Navigation Menu** - Hamburger menu button with navigation to all pages
+- [x] **Window Resizing** - Works and looks good across all Screen sizes including smartphone.
+- [x] **Images** - Images sized to the width of the webpages.
+- [x] **Text** - Formatted text and location.

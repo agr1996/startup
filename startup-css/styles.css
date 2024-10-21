@@ -11,32 +11,40 @@ body {
 
 /* Header styling */
 header {
+    flex-grow: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #333;
-    color: white;
+    background-color: #03363D;
+    color: #F8F9F9;
     position: relative;
 }
 
 main {
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #D8EEF2;
+    color: #03363D
 }
 
 /* Footer styling */
 footer {
+    flex-grow: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #333;
-    color: white;
+    background-color: white;
+    color: #03363D;
     position: bottom;
-    margin-top: auto; /* Ensures footer is pushed to the bottom */
+}
+
+footer a {
+    color: #03363D;
 }
 
 /* Navigation button styling */
@@ -58,7 +66,13 @@ footer {
 
 /* Title styling */
 h1 {
-    flex-grow: 1;
+    flex-grow: 0;
+    text-align: center;
+    margin: 0;
+}
+
+h2 {
+    flex-grow: 0;
     text-align: center;
     margin: 0;
 }
@@ -70,8 +84,8 @@ img {
 
 /* General button styling */
 button {
-    background-color: #555;
-    color: white;
+    background-color: #174D4D;
+    color: #F8F9F9;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
