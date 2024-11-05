@@ -13,29 +13,29 @@ function App() {
 
   return (
     <BrowserRouter>
-    
-    
-    
-    <Routes>
-      <Route path="/" element={<home />} />
-      <Route path="/signin" element={<signin />} />
-      <Route path="/register" element={<register />} />
-      <Route path="/share" element={<share />} />
-      <Route path="/markup" element={<markup />} />
-      <Route path="*" element={<NotFound />} />
+      
 
 
-    </Routes>
-    
-    
-    
-    
-    
-    <footer>
-        <strong>Andrew Redd</strong>
-        <a href="https://github.com/agr1996/startup">GitHub</a>
-    </footer>
-    
+
+        <Routes>
+          <Route path="/home" element={<home />} />
+
+          <Route path="/" element={<home />} />
+          <Route path="/signin" element={<signin />} />
+          <Route path="/register" element={<register />} />
+          <Route path="/share" element={<share />} />
+          <Route path="/markup" element={<markup />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+
+
+
+
+
+        <footer>
+          <strong>Andrew Redd</strong>
+          <a href="https://github.com/agr1996/startup">GitHub</a>
+        </footer>
     </BrowserRouter>
   );
 }
