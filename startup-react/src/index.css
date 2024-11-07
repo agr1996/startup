@@ -1,68 +1,149 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* styles.css */
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
+/* General body styling */
 body {
   margin: 0;
+  font-family: Arial, sans-serif;
   display: flex;
-  place-items: center;
-  min-width: 320px;
+  flex-direction: column;
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Header styling */
+header {
+  flex-grow: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #03363D;
+  color: #F8F9F9;
+  position: relative;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #D8EEF2;
+  color: #03363D
+}
+
+/* Footer styling */
+footer {
+  flex-grow: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  color: #03363D;
+  position: bottom;
+}
+
+footer a {
+  color: #03363D;
+}
+
+/* Navigation button styling */
+.navigation {
+  display: flex;
+  flex-direction: column;
+  background: none;
+  border: none;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* Styling for each bar in the navigation button */
+.navigation .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
 }
+
+/* Title styling */
+h1 {
+  flex-grow: 0;
+  text-align: center;
+  margin: 0;
+}
+
+h2 {
+  flex-grow: 0;
+  text-align: center;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* General button styling */
+button {
+  background-color: #174D4D;
+  color: #F8F9F9;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Small text inside buttons */
+button small {
+  font-size: 0.8em;
+}
+
+/* Navigation menu styling */
+nav {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+/* Show the navigation menu when active */
+nav.active {
+  display: flex;
+}
+
+/* Styling for the navigation list */
+nav ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+/* Styling for each navigation list item */
+nav ul li {
+  margin: 20px 0;
+}
+
+/* Styling for navigation links */
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+/* Close button styling */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+}
+
