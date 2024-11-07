@@ -1,6 +1,8 @@
 import React from 'react'
 
 
-export default function Share() {
+function Share() {
     return <h1>Share</h1>
 }
+
+export default Share;

@@ -1,6 +1,8 @@
 import React from 'react'
 
 
-export default function Markup() {
+function Markup() {
     return <h1>Markup</h1>
 }
+
+export default Markup;

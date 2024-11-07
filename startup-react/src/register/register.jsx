@@ -1,5 +1,7 @@
 import React from 'react'
 
-export default function Register() {
+function Register() {
     return <h1>Register</h1>
 }
+
+export default Register;
