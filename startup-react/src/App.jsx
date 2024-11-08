@@ -6,8 +6,8 @@ import Markup from './Markup/Markup'
 import Register from './Register/Register'
 import Share from './Share/Share'
 import SignIn from './SignIn/SignIn'
-import Header from './Header'
-import Footer from './Footer'
+import Header from './Header/Header'
+import Footer from './Footer/Footer'
 
 function App() {
 
