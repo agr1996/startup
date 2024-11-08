@@ -10,18 +10,18 @@ function SignIn() {
                     <h2>Sign in</h2>
                 </div>
                 <div>
-                    <label for="username"><small>Username</small></label>
-                    <br></br>
-                    <input type="text" id="username" name="username" required></input>
+                    <label htmlFor="username"><small>Username</small></label>
+                    <br />
+                    <input type="text" id="username" name="username" required />
                 </div>
                 <div>
-                    <label for="password"><small>Password</small></label>
-                    <br></br>
-                    <input type="password" id="password" name="password" required></input>
+                    <label htmlFor="password"><small>Password</small></label>
+                    <br />
+                    <input type="password" id="password" name="password" required />
                 </div>
                 <div>
-                    <input type="checkbox" id="rememberMe" name="rememberMe"></input>
-                    <label for="rememberMe"><small>Remember me</small></label>
+                    <input type="checkbox" id="rememberMe" name="rememberMe" />
+                    <label htmlFor="rememberMe"><small>Remember me</small></label>
                 </div>
                 <div>
                     <button type="submit"><small>Sign in</small></button>

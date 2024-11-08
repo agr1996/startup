@@ -1,5 +1,5 @@
-import React from 'react'
-
+import React from 'react';
+import share from './share.svg';
 
 function Share() {
     return (
@@ -9,23 +9,23 @@ function Share() {
                     <h2>Share</h2>
                 </div>
                 <div>
-                    <label for="id"><small>ID</small></label>
-                    <br></br>
-                    <input type="text" placeholder="Recipient ID" id="title" name="title" required></input>
+                    <label htmlFor="id"><small>ID</small></label>
+                    <br />
+                    <input type="text" placeholder="Recipient ID" id="title" name="title" required />
                 </div>
                 <div>
-                    <label for="file"><small>File</small></label>
-                    <br></br>
-                    <input type="file" id="file" name="file" required></input>
+                    <label htmlFor="file"><small>File</small></label>
+                    <br />
+                    <input type="file" id="file" name="file" required />
                 </div>
                 <div>
-                    <label for="description"><small>Description</small></label>
-                    <br></br>
+                    <label htmlFor="description"><small>Description</small></label>
+                    <br />
                     <textarea id="description" placeholder="Optional" name="description"></textarea>
                 </div>
                 <div>
                     <button type="submit">
-                        <img src='share.svg' alt="Sent" style="width: 20px; height: 20px;"></img>
+                        <img src={share} alt="Sent" style={{ width: '20px', height: '20px' }} />
                     </button>
                 </div>
             </form>
