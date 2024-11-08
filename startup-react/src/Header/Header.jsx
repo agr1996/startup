@@ -9,7 +9,7 @@ function Header() {
 
   function Menu() {
     return (
-      <div className="menu-overlay">
+      <div className="menu">
         <nav className="menu-nav">
           <NavLink to="/" onClick='closeMenu()' className="menu-link">Home</NavLink>
           <NavLink to="/SignIn" onClick='closeMenu()' className="menu-link">Sign in</NavLink>
