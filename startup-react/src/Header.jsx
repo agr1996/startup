@@ -5,9 +5,7 @@ import './App.css';
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => setMenuOpen(!menuOpen); 
-
-  const closeMenu = () => setMenuOpen(false);
+  const toggleMenu = () => setMenuOpen(!menuOpen);
 
   function Menu() {
     return (
@@ -26,11 +24,11 @@ function Header() {
   return (
     <>
       <header className="header">
-      <button className="menu-button" onClick={toggleMenu}>
+        <button className="menu-button" onClick={toggleMenu}>
           {menuOpen ? 'X' : '☰'}
         </button>
         <div className="logo">Voodle</div>
-        
+
       </header>
       {menuOpen && <Menu />}
     </>
