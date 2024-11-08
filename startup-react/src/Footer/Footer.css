@@ -1,0 +1,16 @@
+/* Footer styling */
+footer {
+    flex-grow: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    color: #03363D;
+    position: bottom;
+  }
+
+
+footer a {
+  color: #03363D;
+}
