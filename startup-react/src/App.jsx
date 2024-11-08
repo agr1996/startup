@@ -7,6 +7,7 @@ import Register from './Register/Register'
 import Share from './Share/Share'
 import SignIn from './SignIn/SignIn'
 import Header from './Header'
+import Footer from './Footer'
 
 function App() {
 
@@ -22,6 +23,9 @@ function App() {
         <Route path="/Share" element={<Share />} />
         <Route path="/SignIn" element={<SignIn />} />
       </Routes>
+      <div>
+        <Footer />
+      </div>
     </>
   );
 }
