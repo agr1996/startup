@@ -1,25 +1,42 @@
 import React, { useState } from 'react';
-import Menu from './Menu.jsx';
+import { NavLink } from 'react-router-dom';
 import './App.css';
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  const toggleMenu = () => setMenuOpen(!menuOpen); 
+
+  const closeMenu = () => setMenuOpen(false);
+
+  function Menu() {
+    return (
+      <div className="menu-overlay">
+        <nav className="menu-nav">
+          <NavLink to="/" onClick='closeMenu()' className="menu-link">Home</NavLink>
+          <NavLink to="/SignIn" onClick='closeMenu()' className="menu-link">Sign in</NavLink>
+          <NavLink to="/Register" onClick='closeMenu()' className="menu-link">Register</NavLink>
+          <NavLink to="/Markup" onClick='closeMenu()' className="menu-link">Markup</NavLink>
+          <NavLink to="/Share" onClick='closeMenu()' className="menu-link">Share</NavLink>
+        </nav>
+      </div>
+    );
+  }
 
   return (
     <>
       <header className="header">
-        <div className="logo">Voodle</div>
-        <button className="menu-button" onClick={toggleMenu}>
+      <button className="menu-button" onClick={toggleMenu}>
           {menuOpen ? 'X' : '☰'}
         </button>
+        <div className="logo">Voodle</div>
+        
       </header>
       {menuOpen && <Menu />}
     </>
   );
 }
+
+
 
 export default Header;

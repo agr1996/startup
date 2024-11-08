@@ -13,10 +13,9 @@ function App() {
   return (
     <>
       <div>
-
         <Header />
-
-      </div><Routes>
+      </div>
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Markup" element={<Markup />} />
         <Route path="/Register" element={<Register />} />
