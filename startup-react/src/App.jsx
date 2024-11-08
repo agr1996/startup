@@ -16,13 +16,15 @@ function App() {
       <div>
         <Header />
       </div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Markup" element={<Markup />} />
-        <Route path="/Register" element={<Register />} />
-        <Route path="/Share" element={<Share />} />
-        <Route path="/SignIn" element={<SignIn />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Markup" element={<Markup />} />
+          <Route path="/Register" element={<Register />} />
+          <Route path="/Share" element={<Share />} />
+          <Route path="/SignIn" element={<SignIn />} />
+        </Routes>
+      </main>
       <div>
         <Footer />
       </div>
