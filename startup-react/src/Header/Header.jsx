@@ -10,12 +10,12 @@ function Header() {
   function Menu() {
     return (
       <div className="menu">
-        <nav className="menu-nav">
-          <NavLink to="/" onClick='closeMenu()' className="menu-link">Home</NavLink>
-          <NavLink to="/SignIn" onClick='closeMenu()' className="menu-link">Sign in</NavLink>
-          <NavLink to="/Register" onClick='closeMenu()' className="menu-link">Register</NavLink>
-          <NavLink to="/Markup" onClick='closeMenu()' className="menu-link">Markup</NavLink>
-          <NavLink to="/Share" onClick='closeMenu()' className="menu-link">Share</NavLink>
+        <nav>
+          <NavLink to="/" onClick='closeMenu()' className='link'>Home</NavLink>
+          <NavLink to="/SignIn" onClick='closeMenu()' className='link'>Sign in</NavLink>
+          <NavLink to="/Register" onClick='closeMenu()' className='link'>Register</NavLink>
+          <NavLink to="/Markup" onClick='closeMenu()' className='link'>Markup</NavLink>
+          <NavLink to="/Share" onClick='closeMenu()' className='link'>Share</NavLink>
         </nav>
       </div>
     );
@@ -24,7 +24,7 @@ function Header() {
   return (
     <>
       <header className="header">
-        <button className="menu-button" onClick={toggleMenu}>☰</button>
+        <button className='navigation' onClick={toggleMenu}>☰</button>
         <div className="logo">Voodle</div>
 
       </header>
