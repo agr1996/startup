@@ -1,11 +1,20 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import './SignIn.css'
 
 
 function SignIn() {
+    const navigate = useNavigate();
+
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        navigate('/Markup');
+    }
+
     return (
         <>
-            <form method="get" action="markup.html">
+            <form onSubmit={handleSubmit}>
                 <div>
                     <h2>Sign in</h2>
                 </div>

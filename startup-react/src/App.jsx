@@ -19,12 +19,13 @@ function App() {
       </div>
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Markup" element={<Markup />} />
-          <Route path="/Register" element={<Register />} />
-          <Route path="/Share" element={<Share />} />
-          <Route path="/SignIn" element={<SignIn />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path='/' element={<Home />} />
+          <Route path='/Markup' element={<Markup />} />
+          <Route path='/Markup/:id' element={<Markup />} />
+          <Route path='/Register' element={<Register />} />
+          <Route path='/Share' element={<Share />} />
+          <Route path='/SignIn' element={<SignIn />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
       </main>
       <div>

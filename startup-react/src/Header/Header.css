@@ -9,8 +9,13 @@ header {
   position: relative;
 }
 
+button {
+  color: #D8EEF2;
+}
+
 /* Navigation button styling */
 .navigation {
+  color: #D8EEF2;
   background: none;
   border: none;
   cursor: pointer;
