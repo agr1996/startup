@@ -1,11 +1,31 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import './Header.css';
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const location = useLocation();
+  const navigate = useNavigate();
+  
   const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  const renderButton = () => {
+    switch (location.pathname) {
+      case '/':
+        return <button onClick={() => navigate('/SignIn')}>Sign In</button>;
+      case '/SignIn':
+        return <button onClick={() => navigate('/Register')}>Create Account</button>;
+      case '/Register':
+        return <button onClick={() => navigate('/SignIn')}>Sign In</button>;
+      case '/Markup':
+        return <button onClick={() => navigate('/Share')}>Share</button>;
+      case '/Share':
+        return <button onClick={() => navigate('/Markup')}>Markup</button>;
+      default:
+        return <button onClick={() => navigate('/')}>Go to Home</button>;
+    }
+  };
+
 
   function Menu() {
     return (
@@ -21,11 +41,13 @@ function Header() {
     );
   }
 
+
   return (
     <>
       <header className="header">
         <button className='navigation' onClick={toggleMenu}>☰</button>
         <div className="logo">Voodle</div>
+        {renderButton()}
       </header>
       {menuOpen && <Menu />}
     </>
