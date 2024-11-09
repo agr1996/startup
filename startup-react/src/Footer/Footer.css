@@ -21,7 +21,7 @@ footer a {
   display: flex;
   padding: 10px 10px;
   background: none;
-  border: none;
+  border: solid 1px #D8EEF2;
   cursor: pointer;
   border-radius: 50%;
 }
