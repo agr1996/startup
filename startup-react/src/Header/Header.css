@@ -11,11 +11,10 @@ header {
 
   /* Navigation button styling */
 .navigation {
-    display: flex;
-    flex-direction: column;
     background: none;
     border: none;
     cursor: pointer;
+    font-size: 2rem;
   }
 
   nav {

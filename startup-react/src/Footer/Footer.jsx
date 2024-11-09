@@ -9,10 +9,10 @@ function Footer() {
     };
     return (
         <>
-            <footer className="footer">
+            <footer className='footer'>
                 <strong>Andrew Redd</strong>
-                <button onClick={handleClick}>
-                <img src={github} alt="Sent" style={{ width: '20px', height: '20px' }} />
+                <button className='github-button' onClick={handleClick}>
+                    <img src={github} alt="Sent" style={{ width: '20px', height: '20px' }} />
                 </button>
             </footer>
         </>
