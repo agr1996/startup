@@ -9,7 +9,7 @@ footer {
   color: #03363D;
   position: fixed;
   bottom: 0;
-  width: 98%; /* not sure why this makes the width better 100% it goes over the edge*/
+  width: 98.5%; /* not sure why this makes the width better 100% it goes over the edge*/
 }
 
 

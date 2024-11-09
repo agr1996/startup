@@ -22,7 +22,7 @@ function Header() {
       case '/Share':
         return <button onClick={() => navigate('/Markup')}>Markup</button>;
       default:
-        return <button onClick={() => navigate('/')}>Go to Home</button>;
+        return <button onClick={() => navigate('/')}>Home</button>;
     }
   };
 
