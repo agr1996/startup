@@ -1,10 +1,20 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 
 function Register() {
+
+    const navigate = useNavigate();
+
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        navigate('/Markup');
+    }
+
     return (
         <>
-            <form method="get" action="markup.html">
+            <form onSubmit={handleSubmit}>
                 <h2>Create Account</h2>
                 <div>
                     <label htmlFor="username"><small>Username</small></label>
