@@ -26,7 +26,6 @@ function Header() {
       <header className="header">
         <button className='navigation' onClick={toggleMenu}>☰</button>
         <div className="logo">Voodle</div>
-
       </header>
       {menuOpen && <Menu />}
     </>

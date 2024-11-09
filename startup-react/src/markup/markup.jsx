@@ -3,9 +3,15 @@ import { useState } from 'react';
 
 function Markup() {
     const [file, setFile] = useState(null);
+    const [Preview, setPreview] = useState(null);
 
     const handleFileChange = (event) => {
-        setFile(event.target.files[0]);
+        const selectedFile = setFile(event.target.files[0]);
+        setFile(selectedFile);
+        if (selectedFile) {
+            const previewURL = URL.createObjectURL(selectedFile);
+            setPreview(previewURL);
+        }
     };
 
     const handleFileUpload = () => {
@@ -20,9 +26,10 @@ function Markup() {
         <>
             <h1>Markup</h1>
             <div>
-                <input type="file" onChange={handleFileChange} />
+                <input type="file" name='image' accept='image/svg+xml' onChange={handleFileChange} />
                 <button onClick={handleFileUpload}>Upload</button>
             </div>
+            {Preview && <img src={Preview} alt='Preview' />}
         </>
     );
 }

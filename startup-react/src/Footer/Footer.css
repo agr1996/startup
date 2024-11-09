@@ -9,7 +9,7 @@ footer {
   color: #03363D;
   position: fixed;
   bottom: 0;
-  width: 100%;
+  width: 98%; /* not sure why this makes the width better 100% it goes over the edge*/
 }
 
 
@@ -19,8 +19,14 @@ footer a {
 
 .github-button {
   display: flex;
-  flex-direction: column;
+  padding: 10px 10px;
   background: none;
   border: none;
   cursor: pointer;
+  border-radius: 50%;
+}
+
+.github-button:hover {
+  color: #F8F9F9;
+  background-color: #03363D;
 }
