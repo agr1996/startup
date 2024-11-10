@@ -79,6 +79,6 @@ I will use the following technologies to implement my Voodle application.
 
 - [x] **Bundled Using Vite** - Originally created the application in `Vite` and used the npm run build to build the application that was deployed to my server. Used npm run dev to view the the changes and program the application in react.
 - [x] **Multiple React Components** - Rebuilt the header footer Navigation menu, as react components that are called in by the app then depending on the pages there are individual react components for the home page, share page, sign in page, register page and markup pages. CSS for each page has been compartmentalized with the respective pages and their needs. 
-- [x] **Implament of mock all app functionality** - Formatted text and location.
-- [x] **React router** - Formatted text and location.
-- [x] **React hooks** - Formatted text and location.
+- [x] **Implament of mock all app functionality** - Some of the functionality like the share to another user and the actual svg image markup is going to be fully implemented on the backend. Markup currently loads an SVG file and previews it as a mockup of the app functionality. 
+- [x] **React router** - Routing between components, on the header and navigation menu 
+- [x] **React hooks** - using hooks for different buttons used in the header to route to different parts of the application.
