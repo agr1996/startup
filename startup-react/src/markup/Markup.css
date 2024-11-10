@@ -1,11 +1,5 @@
-main {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-img {
-    width: 95vw;
+.panda img {
+    width: 90vw;
     height: calc(100vh - 20rem);
     background-color: white;
 }
@@ -14,7 +8,7 @@ img {
     display: flex;
     justify-content: space-around;
     background-color: #03363D;
-    border-radius: 20px;
+    border-radius: 20px;;
 }
 
 .toolbar button {
@@ -27,4 +21,5 @@ img {
     width: 32px;
     height: 32px;
     border-radius: 10px;
+    background-color: #D8EEF2
 }

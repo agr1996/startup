@@ -18,24 +18,25 @@ function Markup() {
 
     return (
         <>
-            <h1>Markup</h1>
-            <div class="toolbar">
-                <button><img src={text} alt="Sent" /></button>
-                <button><img src={onePointCircle} alt="Sent" /></button>
-                <button><img src={square3d} alt="Sent" /></button>
-                <button><img src={linear} alt="Sent" /></button>
-                <button><img src={undo} alt="Sent" /></button>
-                <button><img src={erase} alt="Sent" /></button>
+            <div className='markup'>
+                <h1>Markup</h1>
+                <div class="toolbar">
+                    <button><img src={text} alt="Sent" /></button>
+                    <button><img src={onePointCircle} alt="Sent" /></button>
+                    <button><img src={square3d} alt="Sent" /></button>
+                    <button><img src={linear} alt="Sent" /></button>
+                    <button><img src={undo} alt="Sent" /></button>
+                    <button><img src={erase} alt="Sent" /></button>
+                </div>
 
+                <div class='panda'>
+                    <img src={file} />
+                </div>
+                <div>
+                    <input type="file" accept='image/svg+xml' onChange={getFile} />
+                </div>
+            </div>
 
-            </div>
-            
-            <div>
-                <img src={file} />
-            </div>
-            <div>
-                <input type="file" accept='image/svg+xml' onChange={getFile} />
-            </div>
         </>
     );
 }

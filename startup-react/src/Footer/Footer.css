@@ -1,15 +1,13 @@
 /* Footer styling */
 footer {
   flex-grow: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: white;
-  color: #03363D;
-  position: fixed;
-  bottom: 0;
-  width: 98.5%; /* not sure why this makes the width better 100% it goes over the edge*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #F8F9F9;
+    color: #03363D;
+    position: bottom;
 }
 
 
