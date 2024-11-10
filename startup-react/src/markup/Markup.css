@@ -1,7 +1,20 @@
+main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+img {
+    width: 95vw;
+    height: calc(100vh - 20rem);
+    background-color: white;
+}
+
 .toolbar {
     display: flex;
     justify-content: space-around;
-    padding: 10px;
+    background-color: #03363D;
+    border-radius: 20px;
 }
 
 .toolbar button {
@@ -13,5 +26,5 @@
 .toolbar img {
     width: 32px;
     height: 32px;
+    border-radius: 10px;
 }
-

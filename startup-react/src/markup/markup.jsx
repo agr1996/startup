@@ -1,35 +1,41 @@
 import React from 'react'
 import { useState } from 'react';
+import './Markup.css'
+import text from './text.svg'
+import onePointCircle from './one-point-circle.svg'
+import square3d from './square3d-corner-to-corner.svg'
+import linear from './linear.svg'
+import undo from './undo.svg'
+import erase from './erase.svg'
 
 function Markup() {
-    const [file, setFile] = useState(null);
-    const [Preview, setPreview] = useState(null);
+    const [file, setFile] = useState();
 
-    const handleFileChange = (event) => {
-        const selectedFile = setFile(event.target.files[0]);
-        setFile(selectedFile);
-        if (selectedFile) {
-            const previewURL = URL.createObjectURL(selectedFile);
-            setPreview(previewURL);
-        }
-    };
+    function getFile(event) {
+        setFile(URL.createObjectURL(event.target.files[0]));
 
-    const handleFileUpload = () => {
-        if (file) {
-            // Process the file here
-            console.log('File uploaded:', file);
-            // You can read the file content using FileReader or send it to a server
-        }
-    };
+    }
 
     return (
         <>
             <h1>Markup</h1>
-            <div>
-                <input type="file" name='image' accept='image/svg+xml' onChange={handleFileChange} />
-                <button onClick={handleFileUpload}>Upload</button>
+            <div class="toolbar">
+                <button><img src={text} alt="Sent" /></button>
+                <button><img src={onePointCircle} alt="Sent" /></button>
+                <button><img src={square3d} alt="Sent" /></button>
+                <button><img src={linear} alt="Sent" /></button>
+                <button><img src={undo} alt="Sent" /></button>
+                <button><img src={erase} alt="Sent" /></button>
+
+
             </div>
-            {Preview && <img src={Preview} alt='Preview' />}
+            
+            <div>
+                <img src={file} />
+            </div>
+            <div>
+                <input type="file" accept='image/svg+xml' onChange={getFile} />
+            </div>
         </>
     );
 }

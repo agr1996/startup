@@ -74,3 +74,11 @@ I will use the following technologies to implement my Voodle application.
 - [x] **Window Resizing** - Works and looks good across all Screen sizes including smartphone.
 - [x] **Images** - Images sized to the width of the webpages.
 - [x] **Text** - Formatted text and location.
+
+➡️ The following is what I worked on for my `Startup React` deliverable
+
+- [x] **Bundled Using Vite** - Originally created the application in `Vite` and used the npm run build to build the application that was deployed to my server. Used npm run dev to view the the changes and program the application in react.
+- [x] **Multiple React Components** - Rebuilt the header footer Navigation menu, as react components that are called in by the app then depending on the pages there are individual react components for the home page, share page, sign in page, register page and markup pages. CSS for each page has been compartmentalized with the respective pages and their needs. 
+- [x] **Implament of mock all app functionality** - Formatted text and location.
+- [x] **React router** - Formatted text and location.
+- [x] **React hooks** - Formatted text and location.
