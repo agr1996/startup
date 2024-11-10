@@ -82,3 +82,4 @@ I will use the following technologies to implement my Voodle application.
 - [x] **Implament of mock all app functionality** - Some of the functionality like the share to another user and the actual svg image markup is going to be fully implemented on the backend. Markup currently loads an SVG file and previews it as a mockup of the app functionality. 
 - [x] **React router** - Routing between components, on the header and navigation menu 
 - [x] **React hooks** - using hooks for different buttons used in the header to route to different parts of the application.
+- [x] **404 not found** - properly implement a 404 page when page doesn't exist
