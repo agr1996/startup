@@ -19,6 +19,10 @@ app.use(express.static('public'));
 var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
+apiRouter.post('/ping', async (req, res) => {
+  res.send({ msg: 'pong' });
+});
+
 // CreateAuth a new user
 apiRouter.post('/auth/create', async (req, res) => {
   const user = users[req.body.email];
