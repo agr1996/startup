@@ -74,6 +74,7 @@ I will use the following technologies to implement my Voodle application.
 - [x] **Window Resizing** - Works and looks good across all Screen sizes including smartphone.
 - [x] **Images** - Images sized to the width of the webpages.
 - [x] **Text** - Formatted text and location.
+## React deliverable
 
 ➡️ The following is what I worked on for my `Startup React` deliverable
 
@@ -83,6 +84,7 @@ I will use the following technologies to implement my Voodle application.
 - [x] **React router** - Routing between components, on the header and navigation menu 
 - [x] **React hooks** - using hooks for different buttons used in the header to route to different parts of the application.
 - [x] **404 not found** - properly implement a 404 page when page doesn't exist
+## Service deliverable
 
 ➡️ The following is what I worked on for my `Startup Service` deliverable
 
