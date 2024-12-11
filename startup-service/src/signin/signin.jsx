@@ -6,10 +6,31 @@ import './SignIn.css'
 function SignIn() {
     const navigate = useNavigate();
 
+    const [username, setUserName] = React.useState('');
+    const [password, setPassword] = React.useState('');
+
 
     function handleSubmit(event) {
-        event.preventDefault();
-        navigate('/Markup');
+        event.preventDefault()
+        SignIn(username, password)
+    }
+
+    async function SignIn(username, password) {
+        const response = await fetch('/api/auth/login', {
+            method: 'post',
+            body: JSON.stringify({ username: username, password: password }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+        });
+        if (response?.status === 200) {
+            localStorage.setItem('username', username);
+            navigate('/Markup');
+        } else {
+            const body = await response.json();
+            alert(`⚠ Error: ${body.msg}`);
+            console.log("unauthorized");
+        }
     }
 
     return (
@@ -21,12 +42,12 @@ function SignIn() {
                 <div>
                     <label htmlFor="username"><small>Username</small></label>
                     <br />
-                    <input type="text" id="username" name="username" required />
+                    <input type="text" id="username" name="username" required value={username} onChange={(e) => setUserName(e.target.value)} />
                 </div>
                 <div>
                     <label htmlFor="password"><small>Password</small></label>
                     <br />
-                    <input type="password" id="password" name="password" required />
+                    <input type="password" id="password" name="password" required value={password} onChange={(e) => setPassword(e.target.value)} />
                 </div>
                 <div>
                     <input type="checkbox" id="rememberMe" name="rememberMe" />

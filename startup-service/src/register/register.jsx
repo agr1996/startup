@@ -19,10 +19,7 @@ function Register() {
             alert("Passwords don't match")
             return
         }
-        if (Create(username, email, password)) {
-            navigate('/Markup');
-        }
-
+        Create(username, email, password)
     }
 
     async function Create(username, email, password) {
@@ -35,12 +32,11 @@ function Register() {
         });
         if (response?.status === 200) {
             localStorage.setItem('username', username);
-            return true;
+            navigate('/Markup');
 
         } else {
             const body = await response.json();
             alert(`⚠ Error: ${body.msg}`);
-            return false
         }
     }
 
