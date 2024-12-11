@@ -29,7 +29,7 @@ function Markup() {
                     <button><img src={erase} alt="Sent" /></button>
                 </div>
 
-                <div class='panda'>
+                <div className='panda'>
                     <img src={file} />
                 </div>
                 <div>
