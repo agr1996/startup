@@ -1,0 +1,29 @@
+/* Footer styling */
+footer {
+  flex-grow: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #F8F9F9;
+    color: #03363D;
+    position: bottom;
+}
+
+
+footer a {
+  color: #03363D;
+}
+
+.github-button {
+  padding: 10px 10px;
+  background: none;
+  border: solid 1px #D8EEF2;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.github-button:hover {
+  color: #F8F9F9;
+  background-color: #03363D;
+}
