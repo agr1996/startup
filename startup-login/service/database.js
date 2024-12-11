@@ -38,7 +38,5 @@ async function createUser(username, email, password) {
 module.exports = {
   getUser,
   getUserByToken,
-  createUser,
-  addScore,
-  getHighScores,
+  createUser
 };
