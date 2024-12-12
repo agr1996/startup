@@ -88,8 +88,17 @@ I will use the following technologies to implement my Voodle application.
 
 ➡️ The following is what I worked on for my `Startup Service` deliverable
 
-- [x] **Created an HTTP service using Noe,js** - Under startup-services there is a folder called services with an index.js file that functions as the backend of my web application
-- [x] **Frontend seved up using Express static middleware** - I believe the frontend is served with the Express I followed instructions and seems to work
+- [x] **Created an HTTP service using Noed.js** - Under startup-services there is a folder called services with an index.js file that functions as the backend of my web application
+- [x] **Frontend served up using Express static middleware** - I believe the frontend is served with the Express I followed instructions and seems to work
 - [x] **Calls Third party service Endpoints** - On the home Page there is a scripture of the day api it will change each day, this is a 3rd party api that my dad programed for use by his students in the IT Cypersecurity department
 - [x] **Backend provides service endpoints** - Sign in and Register both use the backend to create new users and register and log them in
-- [x] **Frontend Calls your service endpoints** - The home page has a msg function that says pong calling a ping function on the backend this clearly lets me know it is connected to the backend as well as register and signing components call the backend functions to create and sign in to the application 
+- [x] **Frontend Calls your service endpoints** - The home page has a msg function that says pong calling a ping function on the backend this clearly lets me know it is connected to the backend as well as register and signing components call the backend functions to create and sign in to the application
+## Login deliverable
+
+➡️ The following is what I worked on for my `Startup login` deliverable
+
+- [x] **Supports new user registration** - 
+- [x] **Supports existing user authentication** - 
+- [x] **Stores application data in MongoDB** - 
+- [x] **Stores and retrieves credentials in MongoDB** - 
+- [x] **Restricts application functionality base upon authentication** - 
