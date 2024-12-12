@@ -235,6 +235,10 @@ react often uses functions inside functions.
 
 To correctly get vite installed it can be difficult to get all the node modules needed for a project its a weird mixture of too many can cause problems and not enough will work on a local machine but not on a remote server
 
+npm init -y will initialize a project for use in node.js then as more modules are added it should fill out the files for npm install to work properly.
+
+
+
 
 ## Link to README
 [README](README.md)
