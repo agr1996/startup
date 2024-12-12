@@ -105,10 +105,19 @@ I will use the following technologies to implement my Voodle application.
 
 ## Websocket deliverable
 
-➡️ The following is what I worked on for my `Startup login` deliverable
+➡️ The following is what I worked on for my `Startup Websocket` deliverable
 
-- [x] **Backend Listens for Websocket connection** - 
-- [x] **Frontend makes Websocket connection** - 
-- [x] **Data sent over Websocket connection** -  
-- [x] **Websocket data displayed in application interface** -  
-- [x] **All visible elements are working** - 
+- [x] **Backend Listens for Websocket connection** - there is communication between the front end and the back end. If you log in on your account twice and change the svg you have loaded it will send a message to the other instance to update the current svg drawing. 
+- [x] **Frontend makes Websocket connection** - the frontend makes a connection to the other instances and updates with changes in markup when a new file is uploaded
+- [x] **Data sent over Websocket connection** - information about image events are communicated between the instances through a message that causes an update and pull from the database to the current svg being marked up 
+- [x] **Websocket data displayed in application interface** -  The updated image from the database is displayed as soon as an other instance changes the svg loaded into the markup application 
+- [x] **All visible elements are working** - the image is persistent, and saved in a database logging in again as a user will load the svg from the database. register and sign in save to the database and can be accessed. all svg's are expanded to a reasonable size for viewing. with multiple logged in instances if the loaded svg is changes the other instance will also update.
+
+The best way to see the application in action is to either register an account or just use the credentials 
+username: `a`
+password: `1`
+
+or username: `b`
+password: `1`
+
+to sign in at which point you can sign in on a second instance. Then if you load another svg in it will update your other instance with that new svg. There are plenty of svgs throughout my source code which can be loaded in from my github repository. tiny svg's will be enlarged for better viewing. they are also persistent between logins and tied to the token of an account depending on authentication changes the web application elements available. signout will unauthenticate you. 
