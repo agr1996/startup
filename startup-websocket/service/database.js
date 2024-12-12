@@ -46,13 +46,13 @@ const emptySVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
 async function getSVG(token) {
   try {
     rec = await svgCollection.findOne({ _id: token });
-    console.log('rec', rec);
+    //console.log('rec', rec);
     if (rec && rec.svg) return rec.svg;
-    console.log('what?');
+    //console.log('what?');
     return emptySVG;
   }
   catch (ex) {
-    console.log(ex);
+    //console.log(ex);
     return emptySVG;
   }
 }

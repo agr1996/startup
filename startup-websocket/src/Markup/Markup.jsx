@@ -34,6 +34,7 @@ function Markup() {
       });
 
     function handleEvent(event) {
+        console.log('Markup event', event);
         if (event.type === GameEvent.Loadsvg) {
             const svgContainer = document.getElementById('svg');
             loadSvgIntoDom('/api/svg', svgContainer);
