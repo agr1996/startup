@@ -49,10 +49,10 @@ function SignIn() {
                     <br />
                     <input type="password" id="password" name="password" required value={password} onChange={(e) => setPassword(e.target.value)} />
                 </div>
-                <div>
+                {/*<div>
                     <input type="checkbox" id="rememberMe" name="rememberMe" />
                     <label htmlFor="rememberMe"><small>Remember me</small></label>
-                </div>
+                </div>*/}
                 <div>
                     <button type="submit"><small>Sign in</small></button>
                 </div>
