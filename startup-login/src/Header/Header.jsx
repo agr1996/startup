@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import './Header.css';
+import { isAuthenticated } from '../AuthState';
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -41,14 +42,23 @@ function Header() {
 
 
   function Menu() {
+    const authenticated = isAuthenticated();
     return (
       <div className="menu">
         <nav>
           <NavLink to="/" onClick='closeMenu()' className='link'>Home</NavLink>
-          <NavLink to="/SignIn" onClick='closeMenu()' className='link'>Sign in</NavLink>
-          <NavLink to="/Register" onClick='closeMenu()' className='link'>Register</NavLink>
-          <NavLink to="/Markup" onClick='closeMenu()' className='link'>Markup</NavLink>
-          <NavLink to="/Share" onClick='closeMenu()' className='link'>Share</NavLink>
+          {!authenticated && (
+            <>
+              <NavLink to="/SignIn" onClick='closeMenu()' className='link'>Sign in</NavLink>
+              <NavLink to="/Register" onClick='closeMenu()' className='link'>Register</NavLink>
+            </>
+          )}
+          {authenticated && (
+            <>
+              <NavLink to="/Markup" onClick='closeMenu()' className='link'>Markup</NavLink>
+              <NavLink to="/Share" onClick='closeMenu()' className='link'>Share</NavLink>
+            </>
+          )}
         </nav>
       </div>
     );
