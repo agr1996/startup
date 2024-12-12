@@ -1,0 +1,25 @@
+.panda svg {
+    width: 90vw;
+    height: calc(100vh - 20rem);
+    background-color: white;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #03363D;
+    border-radius: 20px;;
+}
+
+.toolbar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.toolbar img {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    background-color: #D8EEF2
+}
