@@ -97,8 +97,8 @@ I will use the following technologies to implement my Voodle application.
 
 ➡️ The following is what I worked on for my `Startup login` deliverable
 
-- [x] **Supports new user registration** - 
-- [x] **Supports existing user authentication** - 
-- [x] **Stores application data in MongoDB** - 
-- [x] **Stores and retrieves credentials in MongoDB** - 
-- [x] **Restricts application functionality base upon authentication** - 
+- [x] **Supports new user registration** - new registration is saved in the database and is persistent on restarts and running from my laptop as well as the web server
+- [x] **Supports existing user authentication** - after new registration login can be used to again go to the same account
+- [x] **Stores application data in MongoDB** - The registration of users is saved into mongoDb and the inserted SVG file is persistent between login out and back in the svg is converted to a string and saved in the database then retrieved from the database converted back from a string of xml into the an svg in the dom.
+- [x] **Stores and retrieves credentials in MongoDB** - the credentials as well as an svg string are all saved in mongodb and retrieved on login which is persistent 
+- [x] **Restricts application functionality base upon authentication** - when not logged in and authenticated with a token only home signin and register are available. Once signed in home markup and share are all available. can't markup and save when not logged in the function does in fact change 
