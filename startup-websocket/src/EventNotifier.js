@@ -57,5 +57,5 @@ class GameEventNotifier {
   }
 }
 
-const GameNotifier = new GameEventNotifier();
-export { ImageEvent, GameNotifier };
+const EventNotifier = new GameEventNotifier();
+export { ImageEvent, EventNotifier };

@@ -9,7 +9,7 @@ import undo from './undo.svg'
 import erase from './erase.svg'
 import { isAuthenticated } from '../AuthState';
 import { useNavigate } from 'react-router-dom';
-import { ImageEvent, GameNotifier } from '../gameNotifier';
+import { ImageEvent, EventNotifier } from '../EventNotifier';
 
 function Markup() {
     const [file, setFile] = useState();
@@ -26,10 +26,10 @@ function Markup() {
     }, []);
 
     React.useEffect(() => {
-        GameNotifier.addHandler(handleEvent);
+        EventNotifier.addHandler(handleEvent);
     
         return () => {
-          GameNotifier.removeHandler(handleEvent);
+          EventNotifier.removeHandler(handleEvent);
         };
       });
 
@@ -54,7 +54,7 @@ function Markup() {
         })
             .then((response) => {
                 if (response.ok) {
-                    GameNotifier.broadcastEvent('Markup', ImageEvent.Loadsvg, 0);
+                    EventNotifier.broadcastEvent('Markup', ImageEvent.Loadsvg, 0);
                 } else {
                     throw new Error('Failed to save SVG');
                 }

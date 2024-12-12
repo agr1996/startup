@@ -101,4 +101,14 @@ I will use the following technologies to implement my Voodle application.
 - [x] **Supports existing user authentication** - after new registration login can be used to again go to the same account
 - [x] **Stores application data in MongoDB** - The registration of users is saved into mongoDb and the inserted SVG file is persistent between login out and back in the svg is converted to a string and saved in the database then retrieved from the database converted back from a string of xml into the an svg in the dom.
 - [x] **Stores and retrieves credentials in MongoDB** - the credentials as well as an svg string are all saved in mongodb and retrieved on login which is persistent 
-- [x] **Restricts application functionality base upon authentication** - when not logged in and authenticated with a token only home signin and register are available. Once signed in home markup and share are all available. can't markup and save when not logged in the function does in fact change 
+- [x] **Restricts application functionality base upon authentication** - when not logged in and authenticated with a token only home signin and register are available. Once signed in home markup and share are all available. can't markup and save when not logged in the function does in fact change
+
+## Websocket deliverable
+
+➡️ The following is what I worked on for my `Startup login` deliverable
+
+- [x] **Backend Listens for Websocket connection** - 
+- [x] **Frontend makes Websocket connection** - 
+- [x] **Data sent over Websocket connection** -  
+- [x] **Websocket data displayed in application interface** -  
+- [x] **All visible elements are working** - 
