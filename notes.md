@@ -231,6 +231,10 @@ wbr defines a possible line-break
 
 databases can be really useful
 
+react often uses functions inside functions. 
+
+
+
 
 ## Link to README
 [README](README.md)
