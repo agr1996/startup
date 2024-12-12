@@ -9,7 +9,7 @@ import undo from './undo.svg'
 import erase from './erase.svg'
 import { isAuthenticated } from '../AuthState';
 import { useNavigate } from 'react-router-dom';
-import { GameEvent, GameNotifier } from '../gameNotifier';
+import { ImageEvent, GameNotifier } from '../gameNotifier';
 
 function Markup() {
     const [file, setFile] = useState();
@@ -35,7 +35,7 @@ function Markup() {
 
     function handleEvent(event) {
         console.log('Markup event', event);
-        if (event.type === GameEvent.Loadsvg) {
+        if (event.type === ImageEvent.Loadsvg) {
             const svgContainer = document.getElementById('svg');
             loadSvgIntoDom('/api/svg', svgContainer);
         }

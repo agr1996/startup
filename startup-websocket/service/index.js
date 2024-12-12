@@ -47,7 +47,7 @@ apiRouter.post('/auth/create', async (req, res) => {
 });
 
 apiRouter.post('/svg', async (req, res) => {
-  console.log('save svg', req.body.svg);
+  //console.log('save svg', req.body.svg);
   const authToken = req.cookies[authCookieName];
   await DB.saveSVG(authToken, req.body.svg);
   res.status(201).end();
@@ -114,5 +114,7 @@ function setAuthCookie(res, authToken) {
 const httpService = app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
+
+console.log('peerProxy listening');
 
 peerProxy(httpService);

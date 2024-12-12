@@ -15,7 +15,8 @@ class GameEventNotifier {
   handlers = [];
 
   constructor() {
-    let port = window.location.port;
+    console.log("game notifier constructor")
+    let port = 4000; //window.location.port;
     const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
     this.socket = new WebSocket(`${protocol}://${window.location.hostname}:${port}/ws`);
     this.socket.onopen = (event) => {
@@ -57,4 +58,4 @@ class GameEventNotifier {
 }
 
 const GameNotifier = new GameEventNotifier();
-export { ImageEvent as GameEvent, GameNotifier };
+export { ImageEvent, GameNotifier };
