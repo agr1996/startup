@@ -233,7 +233,7 @@ databases can be really useful
 
 react often uses functions inside functions. 
 
-
+To correctly get vite installed it can be difficult to get all the node modules needed for a project its a weird mixture of too many can cause problems and not enough will work on a local machine but not on a remote server
 
 
 ## Link to README
