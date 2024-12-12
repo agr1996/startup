@@ -16,7 +16,7 @@ class ImageEventNotifier {
 
   constructor() {
     console.log("game notifier constructor")
-    let port = window.location.port == 443 ? 443 : 4000;
+    let port = window.location.port; //== 443 ? 443 : 4000;
     const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
     this.socket = new WebSocket(`${protocol}://${window.location.hostname}:${port}/ws`);
     this.socket.onopen = (event) => {
