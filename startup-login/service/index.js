@@ -45,6 +45,19 @@ apiRouter.post('/auth/create', async (req, res) => {
   }
 });
 
+apiRouter.post('/svg', async (req, res) => {
+  console.log('save svg', req.body.svg);
+  const authToken = req.cookies[authCookieName];
+  await DB.saveSVG(authToken, req.body.svg);
+  res.status(201).end();
+});
+
+apiRouter.get('/svg', async (req, res) => {
+  const authToken = req.cookies[authCookieName];
+  const svg = await DB.getSVG(authToken);
+  res.send(svg);
+});
+
 // GetAuth token for the provided credentials
 apiRouter.post('/auth/signin', async (req, res) => {
   const user = await DB.getUser(req.body.username);

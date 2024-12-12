@@ -33,7 +33,7 @@ function Header() {
       case '/Markup':
         return <button onClick={() => signOut()}>Sign Out</button>;
       case '/Share':
-        return <button onClick={() => navigate('/Markup')}>Markup</button>;
+        return <button onClick={() => signOut()}>Sign Out</button>;
       default:
         return <button onClick={() => navigate('/')}>Home</button>;
     }

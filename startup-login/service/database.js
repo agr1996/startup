@@ -7,6 +7,7 @@ const url = `mongodb+srv://${config.userName}:${config.password}@${config.hostna
 const client = new MongoClient(url);
 const db = client.db('Startup');
 const userCollection = db.collection('user');
+const svgCollection = db.collection('svg');
 
 // This will asynchronously test the connection and exit the process if it fails
 (async function testConnection() {
@@ -35,8 +36,31 @@ async function createUser(username, email, password) {
   return user;
 }
 
+async function saveSVG(token, svg) {
+  const svgDoc = { _id: token, svg: svg };
+  await svgCollection.replaceOne({ _id: token }, svgDoc, { upsert: true });
+}
+
+const emptySVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"></svg>';
+
+async function getSVG(token) {
+  try {
+    rec = await svgCollection.findOne({ _id: token });
+    console.log('rec', rec);
+    if (rec && rec.svg) return rec.svg;
+    console.log('what?');
+    return emptySVG;
+  }
+  catch (ex) {
+    console.log(ex);
+    return emptySVG;
+  }
+}
+
 module.exports = {
   getUser,
   getUserByToken,
-  createUser
+  createUser,
+  saveSVG,
+  getSVG
 };

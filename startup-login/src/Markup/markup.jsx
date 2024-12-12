@@ -17,10 +17,48 @@ function Markup() {
         const navigate = useNavigate();
         navigate('/SignIn');
     }
+    
+    React.useEffect(() => {
+        console.log('Loading SVG');
+        const svgContainer = document.getElementById('svg');
+        loadSvgIntoDom('/api/svg', svgContainer);
+    }, []);
 
-    function getFile(event) {
-        setFile(URL.createObjectURL(event.target.files[0]));
+    async function getFile(event) {
+        const svgContainer = document.getElementById('svg');
+        await loadSvgIntoDom(URL.createObjectURL(event.target.files[0]), svgContainer);
+        const svg = svgContainer.innerHTML;
+        fetch('/api/svg', {
+            method: 'post',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ svg: svg }),
+        })
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Failed to save SVG');
+                }
+            })
+            .catch((ex) => {
+                console.error(ex);
+            });
+    }
 
+    async function loadSvgIntoDom(url, parentElement) {
+        const response = await fetch(url);
+        const text = await response.text();
+        console.log(text);
+        const xmlDoc = new DOMParser().parseFromString(text, 'text/xml');
+        const docEle = xmlDoc.documentElement;
+        // If there is no viewbox then add one.
+        if (!docEle.getAttribute("viewBox")) {
+            console.log("0 0 " + docEle.width.baseVal.value + " " + docEle.height.baseVal.value);
+            docEle.setAttribute("viewBox", "0 0 " + docEle.width.baseVal.value + " " + docEle.height.baseVal.value);
+        }
+
+        parentElement.innerHTML = '';
+        parentElement.append(document.importNode(xmlDoc.documentElement, true));
     }
 
     return (
@@ -36,8 +74,8 @@ function Markup() {
                     <button><img src={erase} alt="Sent" /></button>
                 </div>
 
-                <div className='panda'>
-                    <img src={file} />
+                <div id='svg' className='panda'>
+
                 </div>
                 <div>
                     <input type="file" accept='image/svg+xml' onChange={getFile} />
