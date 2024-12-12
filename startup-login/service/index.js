@@ -46,7 +46,7 @@ apiRouter.post('/auth/create', async (req, res) => {
 });
 
 // GetAuth token for the provided credentials
-apiRouter.post('/auth/login', async (req, res) => {
+apiRouter.post('/auth/signin', async (req, res) => {
   const user = await DB.getUser(req.body.username);
   if (user) {
     if (await bcrypt.compare(req.body.password, user.password)) {
@@ -59,7 +59,7 @@ apiRouter.post('/auth/login', async (req, res) => {
 });
 
 // DeleteAuth token if stored in cookie
-apiRouter.delete('/auth/logout', (_req, res) => {
+apiRouter.delete('/auth/signout', (_req, res) => {
   res.clearCookie(authCookieName);
   res.status(204).end();
 });

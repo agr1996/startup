@@ -6,8 +6,22 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-  
+
   const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  function signOut() {
+    fetch('/api/auth/signout', {
+
+      method: 'delete',
+    })
+      .catch(() => {
+        // Logout failed. Assuming offline
+      })
+      .finally(() => {
+        localStorage.removeItem('username');
+        props.onLogout();
+      });
+  }
 
   const renderButton = () => {
     switch (location.pathname) {
@@ -18,7 +32,7 @@ function Header() {
       case '/Register':
         return <button onClick={() => navigate('/SignIn')}>Sign In</button>;
       case '/Markup':
-        return <button onClick={() => navigate('/Share')}>Share</button>;
+        return <button onClick={() => signOut}>Sign Out</button>;
       case '/Share':
         return <button onClick={() => navigate('/Markup')}>Markup</button>;
       default:

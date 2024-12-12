@@ -4,7 +4,7 @@ import share from './share.svg';
 function Share() {
     return (
         <>
-            <form method="get" action="markup.html">
+            <form method="get" action="Markup.html">
                 <div>
                     <h2>Share</h2>
                 </div>

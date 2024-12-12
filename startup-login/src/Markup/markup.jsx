@@ -18,7 +18,7 @@ function Markup() {
 
     return (
         <>
-            <div className='markup'>
+            <div className='Markup'>
                 <h1>Markup</h1>
                 <div class="toolbar">
                     <button><img src={text} alt="Sent" /></button>
