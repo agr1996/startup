@@ -10,7 +10,7 @@ class EventMessage {
   }
 }
 
-class GameEventNotifier {
+class ImageEventNotifier {
   events = [];
   handlers = [];
 
@@ -57,5 +57,5 @@ class GameEventNotifier {
   }
 }
 
-const EventNotifier = new GameEventNotifier();
+const EventNotifier = new ImageEventNotifier();
 export { ImageEvent, EventNotifier };

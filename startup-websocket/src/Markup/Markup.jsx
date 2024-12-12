@@ -12,7 +12,6 @@ import { useNavigate } from 'react-router-dom';
 import { ImageEvent, EventNotifier } from '../EventNotifier';
 
 function Markup() {
-    const [file, setFile] = useState();
 
     if (!isAuthenticated()) {
         const navigate = useNavigate();
