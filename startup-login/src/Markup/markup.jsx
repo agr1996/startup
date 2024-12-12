@@ -7,9 +7,16 @@ import square3d from './square3d-corner-to-corner.svg'
 import linear from './linear.svg'
 import undo from './undo.svg'
 import erase from './erase.svg'
+import { isAuthenticated } from '../AuthState';
+import { useNavigate } from 'react-router-dom';
 
 function Markup() {
     const [file, setFile] = useState();
+
+    if (!isAuthenticated()) {
+        const navigate = useNavigate();
+        navigate('/SignIn');
+    }
 
     function getFile(event) {
         setFile(URL.createObjectURL(event.target.files[0]));

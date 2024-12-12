@@ -18,8 +18,7 @@ function Header() {
         // Logout failed. Assuming offline
       })
       .finally(() => {
-        localStorage.removeItem('username');
-        props.onLogout();
+        navigate('/')
       });
   }
 
