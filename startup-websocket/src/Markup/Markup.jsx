@@ -9,6 +9,7 @@ import undo from './undo.svg'
 import erase from './erase.svg'
 import { isAuthenticated } from '../AuthState';
 import { useNavigate } from 'react-router-dom';
+import { GameEvent, GameNotifier } from '../gameNotifier';
 
 function Markup() {
     const [file, setFile] = useState();
@@ -24,6 +25,21 @@ function Markup() {
         loadSvgIntoDom('/api/svg', svgContainer);
     }, []);
 
+    React.useEffect(() => {
+        GameNotifier.addHandler(handleEvent);
+    
+        return () => {
+          GameNotifier.removeHandler(handleEvent);
+        };
+      });
+
+    function handleEvent(event) {
+        if (event.type === GameEvent.Loadsvg) {
+            const svgContainer = document.getElementById('svg');
+            loadSvgIntoDom('/api/svg', svgContainer);
+        }
+    }
+
     async function getFile(event) {
         const svgContainer = document.getElementById('svg');
         await loadSvgIntoDom(URL.createObjectURL(event.target.files[0]), svgContainer);
@@ -36,7 +52,9 @@ function Markup() {
             body: JSON.stringify({ svg: svg }),
         })
             .then((response) => {
-                if (!response.ok) {
+                if (response.ok) {
+                    GameNotifier.broadcastEvent('Markup', ImageEvent.Loadsvg, 0);
+                } else {
                     throw new Error('Failed to save SVG');
                 }
             })
