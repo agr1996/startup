@@ -10,8 +10,7 @@ function Header() {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   function signOut() {
-    fetch('/api/auth/signout', {
-
+    fetch(`/api/auth/signout`, {
       method: 'delete',
     })
       .catch(() => {
@@ -32,7 +31,7 @@ function Header() {
       case '/Register':
         return <button onClick={() => navigate('/SignIn')}>Sign In</button>;
       case '/Markup':
-        return <button onClick={() => signOut}>Sign Out</button>;
+        return <button onClick={() => signOut()}>Sign Out</button>;
       case '/Share':
         return <button onClick={() => navigate('/Markup')}>Markup</button>;
       default:
